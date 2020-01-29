@@ -11,3 +11,5 @@
 ####
 
 > npm run serve
+
+_Please Ensure the client folder is in the same directory with the sever.js file_
