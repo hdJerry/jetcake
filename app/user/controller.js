@@ -57,6 +57,7 @@ async function loginUser(data){
        email : res[0].email,
        phone : res[0].phone,
        photo: res[0].photo,
+       dob: res[0].dob,
        address : res[0].address,
        secret : res[0].secret,
        token : token
@@ -131,7 +132,7 @@ async function editUser(data,request){
   let datas = JSON.parse(JSON.stringify(data));
 
   delete datas.token;
-  
+
   let res = await dbUSERS.updateOne({
     "_id" : ObjectId(user)
   },{
